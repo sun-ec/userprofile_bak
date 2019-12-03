@@ -1,0 +1,21 @@
+{nameNode=hdfs://bd001:8020
+sparkOptions= --driver-memory 512m --executor-memory 512m --num-executors 1 --executor-cores 1 --conf spark.yarn.historyServer.address=http://bd001:18081 --conf spark.eventLog.enabled=true --conf spark.eventLog.dir=hdfs://bd001:8020/apps/spark2/spark2-history/ --conf spark.yarn.jars=hdfs://bd001:8020/apps/archive/sparklib/spark-libs.jar
+start=2019-10-28T08:00+0800
+freq=0/10 * * * *
+master=yarn
+oozie.use.system.libpath=true
+queueName=default
+end=2028-11-30T08:00+0800
+jobTracker=bd001:8032
+oozie.libpath=${nameNode}/user/root/share/lib/lib_20190802113508/spark2
+mainClass=cn.itcast.up29.TestTag
+mode=cluster
+appPath=hdfs://bd001:8020/apps/tags_new/models/tags_24
+appName=tags
+jarPath=hdfs://bd001:8020/temp/jars/148440d7-03f1-4afc-b7e8-dc130bc36caf.jar
+user.name=root
+oozie.coord.application.path=hdfs://bd001:8020/apps/tags_new/models/tags_24}
+
+
+
+0000009-191028113319580-oozie-root-C
